@@ -15,14 +15,18 @@ I choose to donate bandwidth and compute resource for the community, so that any
 
 Everything you need to know is described here :
 
-1. The repo runs on my servers. Sources are updated randomly once per hour.
-2. To add another URL, edit the `sources.js` file. (see below full explanation)
-3. You are expected to be a developer, or get help from a developer. This is no auto-parser.
-4. If you don't want to use community servers, you may fork this repo and run it on your servers.
+1. Edit `sources.js` and add your website URL and parsing rules.
+2. The script **runs on my server every hour**.
+3. You can add `www2rss.snwfdhmp.com/<sourceId>/rss.xml` to your RSS reader. I'm using [miniflux](https://github.com/miniflux/v2) myself.
+
+## Guide: More details
+
+1. You are expected to be a developer, or get help from a developer. This is no auto-parser.
+2. If you don't want to use community servers, you may fork this repo and run it on your servers.
 
 ## Guide: How to add a new source
 
-1. Edit the `sources.js` file.
+1. Edit the `sources.js` file. I will review it and accept it ASAP.
 
 Example:
 
@@ -49,8 +53,15 @@ Example:
 },
 ```
 
+**IMPORTANT**:
+
+1. Test locally first to ensure minimum of back-and-forth. Clone, edit, run, verify .xml file and then open a pull request.
+2. Ensure `id` is unique for your source, otherwise things will break.
+3. Add your source **to the end** of the sources.js.
+4. In case I'm really long to answer your PR, contact me on discord `mjo___`
+
 ## Contributing
 
-1. PRs opened. No strict rules, just make your best.
+1. Open a pull requests. No strict rules, just make your best.
 2. Donating helps a lot. [GitHub Sponsors](https://github.com/sponsors/snwfdhmp)
 3. Leave a star ⭐️ so it can help more people.
