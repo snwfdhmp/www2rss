@@ -116,6 +116,9 @@ setInterval(refreshSources, 1000 * 60 * 60) // refresh every hour
 /* HTTP SERVER */
 const PORT = 24712
 const app = express()
+app.get("/", (req, res) => {
+  res.send("ok")
+})
 app.get("/:sourceId/rss.xml", (req, res) => {
   const { sourceId } = req.params
   const rssFilePath = sourceIdToFilePath(sourceId)
