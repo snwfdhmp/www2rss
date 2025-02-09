@@ -1,0 +1,13 @@
+[Unit]
+Description=com.snwfdhmp.www2rss
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/github.com/snwfdhmp/www2rss
+ExecStart=/usr/local/bin/node main.js
+Restart=on-failure
+RestartSec=10
+SyslogIdentifier=com.snwfdhmp.www2rss
+
+[Install]
+WantedBy=multi-user.target
